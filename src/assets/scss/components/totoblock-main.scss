@@ -1,0 +1,7 @@
+.b-totoblock-main {
+}
+.b-totoblock-main__block {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}

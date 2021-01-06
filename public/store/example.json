@@ -1,0 +1,122 @@
+[
+    {
+        "name": "reviews",
+        "title": "Отзывы",
+        "categoryId": 1454,
+        "previewUrl": "https://beeonis.com/storage/blocks/reviews/preview.jpg",
+        "fields": [
+            {
+                "type": "tab",
+                "label": "Контент"
+            },
+            {
+                "type": "text",
+                "name": "title",
+                "label": "Заголовок",
+                "placeholer": "Введите заголовок",
+                "type": "string",
+                "default_value": "Заголовок блока",
+                "hint": "Подсказка внизу",
+                "tip": "Подсказка всплывающая",
+                "rules": [
+                    {
+                        "name": "required",
+                        "errorMessage": "Нужно заполнить это поле"
+                    },
+                    {
+                        "name": "string",
+                        "errorMessage": "Введите строку от 5 до 255 символов",
+                        "min": 5,
+                        "max": 255
+                    },
+                    {
+                        "name": "email",
+                        "errorMessage": "Неправильный email"
+                    },
+                    {
+                        "name": "regex",
+                        "errorMessage": "Не совпадает",
+                        "regex": "\\d+?\\g"
+                    }
+                ]
+            },
+            {
+                "name": "reviews",
+                "type": "repeater",
+                "label": "Отзывы",
+                "fields": [
+                    {
+                        "type": "text",
+                        "name": "name",
+                        "label": "Имя",
+                        "placeholer": "Введите имя",
+                        "type": "string",
+                        "rules": [
+                            {
+                                "name": "required",
+                                "errorMessage": "Укажите имя"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "textarea",
+                        "name": "text",
+                        "label": "Текст отзыва",
+                        "placeholer": "Введите текст отзыва",
+                        "type": "string",
+                        "rules": [
+                            {
+                                "name": "required",
+                                "errorMessage": "Укажите имя"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "header",
+                "label": "Дополнительные настройки"
+            },
+            {
+                "type": "checkbox",
+                "name": "asSlider",
+                "label": "Показывать как слайдер"
+            },
+            {
+                "type": "text",
+                "name": "slideCount",
+                "label": "Количиество слайдов",
+                "rules": [
+                    {
+                        "name": "regex",
+                        "errorMessage": "Введите цифру",
+                        "regex": "\\d+?\\g"
+                    }
+                ]
+            },
+            {
+                "type": "tab",
+                "label": "Внешний вид"
+            },
+            {
+                "type": "select",
+                "name": "headerFontSize",
+                "label": "Размер заголовка",
+                "items": [
+                    "12px",
+                    "14px",
+                    "21px",
+                    "36px",
+                    "72px"
+                ],
+                "rules": [
+                    {
+                        "name": "regex",
+                        "errorMessage": "Введите цифру",
+                        "regex": "\\d+?\\g"
+                    }
+                ]
+            }
+        ]
+    }
+]
